@@ -1,0 +1,27 @@
+{
+  "name": "elastic-search-firebase",
+  "version": "1.0.0",
+  "description": "Elastic Search Client for Firebase App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnWebb4/elastic-search-firebase.git"
+  },
+  "keywords": [
+    "Elastic",
+    "Search",
+    "Firebase"
+  ],
+  "author": "JohnWebb4",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnWebb4/elastic-search-firebase/issues"
+  },
+  "homepage": "https://github.com/JohnWebb4/elastic-search-firebase#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.10.0"
+  }
+}

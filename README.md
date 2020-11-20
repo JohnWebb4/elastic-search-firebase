@@ -1,6 +1,6 @@
 # Elastic Search Firebase
 
-## Goal: Add Elasit Search to a Firebase project
+## Goal: Add Elastic Search to a Firebase project
 
 Adding Elastic Search to a Firebase app
 
