@@ -10,16 +10,18 @@ Install [Docker](https://www.docker.com/get-started) and [Docker Compose](https:
 
 Install [Node](https://nodejs.org/)
 
+Install [Curl CLI](https://github.com/curl/curl) if you don't have it
+
 Clone via SSH
 
 ```sh
 git clone git@github.com:JohnWebb4/elastic-search-firebase.git && cd elastic-search-firebase
 ```
 
-Install client libraries
+Install function libraries
 
 ```sh
-cd client && npm i
+cd function && npm i
 ```
 
 Update the max map count to support the server. Add this to /etc/sysctl.conf
@@ -28,7 +30,7 @@ Update the max map count to support the server. Add this to /etc/sysctl.conf
 vm.max_map_count=262144
 ```
 
-Run server
+## Run Server
 
 ```sh
 ./bin/server.sh
@@ -40,8 +42,19 @@ Verify server running
 curl http://127.0.0.1:9200/_cat/health
 ```
 
-Run client
+Simple script to add and return search results
 
 ```sh
+cd client & npm i
 ./bin/client.sh
+```
+
+## Run Firebase client
+
+Run the server locally
+
+```sh
+./bin/dev.sh
+curl http://localhost:5001/elastic-search-firebase/us-central1/setIndex -X POST
+curl http://localhost:5001/elastic-search-firebase/us-central1/getIndex
 ```
