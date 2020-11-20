@@ -22,10 +22,22 @@ Install client libraries
 cd client && npm i
 ```
 
+Update the max map count to support the server. Add this to /etc/sysctl.conf
+
+```
+vm.max_map_count=262144
+```
+
 Run server
 
 ```sh
 ./bin/server.sh
+```
+
+Verify server running
+
+```sh
+curl http://127.0.0.1:9200/_cat/health
 ```
 
 Run client
